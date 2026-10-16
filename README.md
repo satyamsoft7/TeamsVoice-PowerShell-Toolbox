@@ -29,6 +29,13 @@ Audits tenant voice routing policies, PSTN usage records, SBC gateway registrati
 * Identifies orphaned voice routes and unlicensed users.
 * **Full Runbook:** [Teams Voice Routing Policy Explained](https://skypeexchange4u.com/teams-voice-routing-policy-explained/)
 
+### 4. `Test-TeamsSharedCallingReadiness.ps1`
+A rapid pre-flight diagnostic script to troubleshoot **Teams Shared Calling outbound call drops, silent drops, and SIP 403 Forbidden errors**.
+* Audits `EnterpriseVoiceEnabled` status on shared users without DIDs.
+* Flags `OnlineVoiceRoutingPolicy` conflicts (detects active PSTN Usages that break Shared Calling delegation).
+* Verifies `TeamsSharedCallingPolicy` and backing Resource Account bindings.
+* **Full Troubleshooting Guide:** [Teams Shared Calling Outbound Calls Dropping Fix](https://skypeexchange4u.com/teams-shared-calling-outbound-calls-dropping-fix/)
+
 ---
 
 ## 🚀 Quick Start
