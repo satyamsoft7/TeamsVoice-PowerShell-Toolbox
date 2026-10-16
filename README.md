@@ -36,6 +36,13 @@ A rapid pre-flight diagnostic script to troubleshoot **Teams Shared Calling outb
 * Verifies `TeamsSharedCallingPolicy` and backing Resource Account bindings.
 * **Full Troubleshooting Guide:** [Teams Shared Calling Outbound Calls Dropping Fix](https://skypeexchange4u.com/teams-shared-calling-outbound-calls-dropping-fix/)
 
+### 5. `Test-DirectRoutingMediaPorts.ps1`
+A media plane and network diagnostic script to isolate **one-way audio (dead air), asymmetric routing, and firewall UDP port starvation** on Teams Direct Routing.
+* Tests SIP signaling socket connectivity (TCP 5061) across Microsoft primary, secondary, and tertiary proxies.
+* Audits regional Media Processor STUN/TURN listeners (UDP 3478-3481).
+* Verifies customer SBC listener socket availability.
+* **Full Troubleshooting Guide:** [Teams Direct Routing One-Way Audio Troubleshooting & Fix](https://skypeexchange4u.com/teams-direct-routing-one-way-audio-troubleshooting-fix/)
+
 ---
 
 ## 🚀 Quick Start
