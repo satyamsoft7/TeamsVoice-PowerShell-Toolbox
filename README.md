@@ -43,6 +43,13 @@ A media plane and network diagnostic script to isolate **one-way audio (dead air
 * Verifies customer SBC listener socket availability.
 * **Full Troubleshooting Guide:** [Teams Direct Routing One-Way Audio Troubleshooting & Fix](https://skypeexchange4u.com/teams-direct-routing-one-way-audio-troubleshooting-fix/)
 
+### 6. `Clear-HybridTeamsVoiceAttributes.ps1`
+Remediates stale on-premises Skype for Business Server / Lync attributes in Active Directory to resolve the Microsoft Teams error: *"Cannot modify LineURI because user is synchronized from on-premises AD"*.
+* Safely clears `msRTCSIP-Line` and `msRTCSIP-DeploymentLocator` locks.
+* Exports pre-change audit rollback logs to CSV.
+* Triggers Microsoft Entra Connect delta synchronization.
+* **Full Remediation Runbook:** [Fixing Teams OnPremLineURI Sync Errors & Clearing msRTCSIP Attributes](https://skypeexchange4u.com/fixing-teams-onpremlineuri-sync-clearing-msrtcsip-attributes/)
+
 ---
 
 ## 🚀 Quick Start
