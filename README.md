@@ -50,6 +50,12 @@ Remediates stale on-premises Skype for Business Server / Lync attributes in Acti
 * Triggers Microsoft Entra Connect delta synchronization.
 * **Full Remediation Runbook:** [Fixing Teams OnPremLineURI Sync Errors & Clearing msRTCSIP Attributes](https://skypeexchange4u.com/fixing-teams-onpremlineuri-sync-clearing-msrtcsip-attributes/)
 
+### 7. `Test-TenantMigrationReadiness.ps1`
+A pre-cutover audit script for Microsoft 365 Tenant-to-Tenant (T2T) migrations.
+* Identifies all UPNs, secondary proxyAddresses, and groups locking a custom domain in the source tenant.
+* Summarizes mailbox counts, In-Place Archives, and Litigation Hold states.
+* **Full Migration Runbook:** [Microsoft 365 Tenant-to-Tenant Migration Runbook](https://skypeexchange4u.com/microsoft-365-tenant-to-tenant-migration-runbook/)
+
 ---
 
 ## 🚀 Quick Start
