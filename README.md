@@ -56,6 +56,22 @@ A pre-cutover audit script for Microsoft 365 Tenant-to-Tenant (T2T) migrations.
 * Summarizes mailbox counts, In-Place Archives, and Litigation Hold states.
 * **Full Migration Runbook:** [Microsoft 365 Tenant-to-Tenant Migration Runbook](https://skypeexchange4u.com/microsoft-365-tenant-to-tenant-migration-runbook/)
 
+### 8. `Test-TeamsDirectRoutingCallDropTimers.ps1`
+Isolates deterministic **20–32 second call drops (missing SIP `ACK` after `200 OK` / RFC 3261 Timer H)** and **15-minute call drops (RFC 4028 `Session-Expires` re-INVITE timeouts)** in Microsoft Teams Direct Routing.
+* Audits `SendSipOptions`, `MediaBypass`, and `BypassMode` settings on tenant PSTN gateways.
+* Detects private RFC 1918 IP leaks in public SBC FQDN DNS records (`Q.850 Cause=102`).
+* Verifies TCP 5061 signaling reachability across all 3 Microsoft SIP proxies (`sip`, `sip2`, `sip3.pstnhub.microsoft.com`).
+* **Full Troubleshooting Runbook:** [Teams Direct Routing Calls Dropping After 30 Seconds: SIP ACK & Session Timer Fix](https://skypeexchange4u.com/teams-direct-routing-calls-dropping-30-seconds-sip-ack-fix/)
+
+### 9. `Watch-TeamsSbcTlsAndOptions.ps1`
+An automated synthetic watchdog for **Microsoft Teams Direct Routing Session Border Controllers (AudioCodes, Ribbon, Oracle)**.
+* Probes remote SBC FQDNs on TCP Port 5061 and measures TLS handshake latency.
+* Extracts X.509 SSL certificate expiration dates (`NotAfter`) and alerts 30 / 14 / 7 days before expiry.
+* Companion automation runbooks:
+  * [Teams Direct Routing & SBC Automation Runbook (SIP OPTIONS & TLS Watchdog)](https://skypeexchange4u.com/teams-direct-routing-sbc-automation-runbook/)
+  * [Microsoft 365 & Entra ID PowerShell Automation Runbook (Graph SDK & FinOps)](https://skypeexchange4u.com/microsoft-365-powershell-automation-runbook/)
+  * [Entra Connect vs. Cloud Sync (2026): Comparison Matrix & Migration Guide](https://skypeexchange4u.com/entra-connect-vs-cloud-sync-migrate/)
+
 ---
 
 ## 🚀 Quick Start
